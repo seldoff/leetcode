@@ -6,7 +6,7 @@ namespace Leetcode
     public static class LRUCacheTest
     {
         [Test]
-        public static void TC1()
+        public static void Test()
         {
             var c = new LRUCache(2);
             Assert.AreEqual(-1, c.Get(1));
