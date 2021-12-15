@@ -16,7 +16,7 @@ namespace Leetcode
             }
 
             sum /= 2;
-            var flags = new bool[nums.Length + 1, sum + 1];
+            var flags = new bool[nums.Length + 1, sum + 1]; // [i, j] is true if first i elements can add up to j or more
             flags[0, 0] = true;
             return Do(nums, sum, flags);
         }
@@ -30,6 +30,9 @@ namespace Leetcode
                 {
                     if (n <= j)
                     {
+                        // true if (i - 1) first elements already can add up to j OR
+                        //      if (i - 1) first elements can add up to (j - ith element). So with ith element, first
+                        //      first i elements add up to j.
                         flags[i, j] = flags[i - 1, j] || flags[i - 1, j - n];
                     }
                     else
