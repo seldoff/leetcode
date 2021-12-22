@@ -4,6 +4,7 @@ using NUnit.Framework;
 
 namespace Leetcode
 {
+    // https://leetcode.com/problems/simplify-path/
     public class SimplifyPathSolution
     {
         public string SimplifyPath(string path)
