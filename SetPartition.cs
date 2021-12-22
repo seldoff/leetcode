@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NUnit.Framework;
 
 namespace Leetcode
 {
@@ -43,6 +44,18 @@ namespace Leetcode
             }
 
             return flags[nums.Length, sum];
+        }
+    }
+
+    [TestFixture]
+    public class SetPartitionTest
+    {
+        [Test]
+        public void Test()
+        {
+            Assert.True(new SetPartition().CanPartition(new[] {1, 5, 11, 5}));
+            Assert.False(new SetPartition().CanPartition(new[] {1, 2, 3, 5}));
+            Assert.True(new SetPartition().CanPartition(new[] {1, 5, 10, 6}));
         }
     }
 }

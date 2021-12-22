@@ -10,9 +10,9 @@ namespace Leetcode
     public class ListNode
     {
         public int val;
-        public ListNode next;
+        public ListNode? next;
 
-        public ListNode(int val = 0, ListNode next = null)
+        public ListNode(int val = 0, ListNode? next = null)
         {
             this.val = val;
             this.next = next;
@@ -34,7 +34,7 @@ namespace Leetcode
 
     public class AddNumbersSolution
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        public ListNode? AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode? x = l1;
             ListNode? y = l2;
@@ -67,7 +67,7 @@ namespace Leetcode
 
             if (overflow)
             {
-                curr.next = new ListNode(1);
+                curr!.next = new ListNode(1);
             }
 
             return tail;
